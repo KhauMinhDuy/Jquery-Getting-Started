@@ -69,7 +69,7 @@
 <div class="row">
     <div class="col-sm-5">
         <img src="../img/house.png"
-             class="img-responsive img-thumbnail" />
+             class="img-responsive img-thumbnail" alt=''/>
         <h3>Showing Date</h3>
         <input type="date" class="form-control" id="showing-date" />
 
@@ -102,17 +102,18 @@
             Anytown, CO 80525
         </div>
         <table class="table table-default table-striped">
+            <caption></caption>
             <tbody>
                 <tr>
-                    <th>Bedrooms</th>
+                    <th scope="col">Bedrooms</th>
                     <td>6</td>
                 </tr>
                 <tr>
-                    <th>Bathrooms</th>
+                    <th scope="col">Bathrooms</th>
                     <td>4.5</td>
                 </tr>
                 <tr>
-                    <th>Square Feet</th>
+                    <th scope="col">Square Feet</th>
                     <td>4,500</td>
                 </tr>
             </tbody>
@@ -495,6 +496,32 @@ $(function(){
     $('h2').hide();
 
     $('h2').show();
+
+    // $('#save-button').one('click',function () {
+    //     console.log('The save buttin is clicked');
+    // })
+
+    // $('#save-button').click(function() {
+    //     console.log('The save button is clicked');
+    // });
+
+    // $('#save-button').blur(function() {
+    //     console.log('mo more love');
+    // });
+
+    $('#special-features li').addClass('highlight bordered');
+
+    $('#special-features').each(function(index, element) {
+        console.log($(element).text());
+    });
+
+    $('#showing-date').val('2021-06-01');
+    let date =  $('#showing-date').val();
+    console.log(date);
+
+    // $('#owner-present-check').attr('checked', true);
+
+    $('#owner-present-check').prop('checked', true);
 
 </script>
 </html>
